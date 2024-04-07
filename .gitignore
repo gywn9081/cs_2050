@@ -1,0 +1,12 @@
+# Ignore compilation outputs
+*.out
+output
+out
+
+# Ignore windows downloads
+*Zone.Identifier
+*.zip
+
+# Ignore VScode files
+*.code-workspace
+
