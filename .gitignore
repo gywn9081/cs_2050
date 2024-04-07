@@ -9,3 +9,6 @@ out
 
 # Ignore VScode files
 *.code-workspace
+
+# Ignore misc files
+misc/
