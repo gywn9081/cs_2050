@@ -1,0 +1,208 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 28.30      6.20     6.20 2504612881     0.00     0.00  swap
+ 22.68     11.17     4.97 1413854729     0.00     0.00  compareInts
+ 21.31     15.84     4.67        1     4.67    13.34  bubbleSort
+  9.81     17.99     2.15        1     2.15     4.63  selectionSort
+  7.67     19.67     1.68                             _init
+  7.35     21.28     1.61                             print_int_array
+  2.83     21.90     0.62                             main
+  0.05     21.91     0.01    99999     0.00     0.00  merge
+  0.00     21.91     0.00    90009     0.00     0.00  quickSortPartition
+  0.00     21.91     0.00        1     0.00     0.02  mergeSort
+  0.00     21.91     0.00        1     0.00     0.02  mergeSortRecursive
+  0.00     21.91     0.00        1     0.00     0.01  quickSort
+  0.00     21.91     0.00        1     0.00     0.01  quickSortRecursive
+
+			Call graph
+
+
+granularity: each sample hit covers 4 byte(s) for 0.05% of 21.91 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     85.0    0.62   18.00                 main [1]
+                4.67    8.67       1/1           bubbleSort [2]
+                2.15    2.48       1/1           selectionSort [5]
+                0.00    0.02       1/1           mergeSort [9]
+                0.00    0.01       1/1           quickSort [12]
+-----------------------------------------------
+                4.67    8.67       1/1           main [1]
+[2]     60.9    4.67    8.67       1         bubbleSort [2]
+                6.20    0.00 2503064942/2504612881     swap [3]
+                2.48    0.00 704982704/1413854729     compareInts [4]
+-----------------------------------------------
+                0.00    0.00  100000/2504612881     selectionSort [5]
+                0.00    0.00 1447939/2504612881     quickSortPartition [11]
+                6.20    0.00 2503064942/2504612881     bubbleSort [2]
+[3]     28.3    6.20    0.00 2504612881         swap [3]
+-----------------------------------------------
+                0.01    0.00 1536128/1413854729     merge [8]
+                0.01    0.00 2253193/1413854729     quickSortPartition [11]
+                2.48    0.00 704982704/1413854729     bubbleSort [2]
+                2.48    0.00 705082704/1413854729     selectionSort [5]
+[4]     22.7    4.97    0.00 1413854729         compareInts [4]
+-----------------------------------------------
+                2.15    2.48       1/1           main [1]
+[5]     21.1    2.15    2.48       1         selectionSort [5]
+                2.48    0.00 705082704/1413854729     compareInts [4]
+                0.00    0.00  100000/2504612881     swap [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      7.7    1.68    0.00                 _init [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      7.3    1.61    0.00                 print_int_array [7]
+-----------------------------------------------
+                0.01    0.01   99999/99999       mergeSortRecursive [10]
+[8]      0.1    0.01    0.01   99999         merge [8]
+                0.01    0.00 1536128/1413854729     compareInts [4]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[9]      0.1    0.00    0.02       1         mergeSort [9]
+                0.00    0.02       1/1           mergeSortRecursive [10]
+-----------------------------------------------
+                              199998             mergeSortRecursive [10]
+                0.00    0.02       1/1           mergeSort [9]
+[10]     0.1    0.00    0.02       1+199998  mergeSortRecursive [10]
+                0.01    0.01   99999/99999       merge [8]
+                              199998             mergeSortRecursive [10]
+-----------------------------------------------
+                0.00    0.01   90009/90009       quickSortRecursive [13]
+[11]     0.1    0.00    0.01   90009         quickSortPartition [11]
+                0.01    0.00 2253193/1413854729     compareInts [4]
+                0.00    0.00 1447939/2504612881     swap [3]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[12]     0.1    0.00    0.01       1         quickSort [12]
+                0.00    0.01       1/1           quickSortRecursive [13]
+-----------------------------------------------
+                              180018             quickSortRecursive [13]
+                0.00    0.01       1/1           quickSort [12]
+[13]     0.1    0.00    0.01       1+180018  quickSortRecursive [13]
+                0.00    0.01   90009/90009       quickSortPartition [11]
+                              180018             quickSortRecursive [13]
+-----------------------------------------------
+
+Index by function name
+
+   [6] _init                   [9] mergeSort              [13] quickSortRecursive
+   [2] bubbleSort             [10] mergeSortRecursive      [5] selectionSort
+   [4] compareInts             [7] print_int_array         [3] swap
+   [1] main                   [12] quickSort
+   [8] merge                  [11] quickSortPartition
+
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 26.66      5.50     5.50 2504612881     0.00     0.00  swap
+ 23.80     10.41     4.91        1     4.91    12.67  bubbleSort
+ 22.06     14.96     4.55 1414254865     0.00     0.00  compareInts
+  9.26     16.87     1.91        1     1.91     4.18  selectionSort
+  8.53     18.63     1.76                             _init
+  7.51     20.18     1.55                             print_int_array
+  2.18     20.63     0.45                             main
+  0.00     20.63     0.00    99999     0.00     0.00  merge
+  0.00     20.63     0.00    90009     0.00     0.00  quickSortPartition
+  0.00     20.63     0.00        4     0.00     0.00  binarySearch
+  0.00     20.63     0.00        4     0.00     0.00  linearSearch
+  0.00     20.63     0.00        1     0.00     0.00  mergeSort
+  0.00     20.63     0.00        1     0.00     0.00  mergeSortRecursive
+  0.00     20.63     0.00        1     0.00     0.01  quickSort
+  0.00     20.63     0.00        1     0.00     0.01  quickSortRecursive
+
+			Call graph
+
+
+granularity: each sample hit covers 4 byte(s) for 0.05% of 20.63 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     84.0    0.45   16.87                 main [1]
+                4.91    7.76       1/1           bubbleSort [2]
+                1.91    2.27       1/1           selectionSort [5]
+                0.00    0.01       1/1           quickSort [9]
+                0.00    0.00       1/1           mergeSort [12]
+                0.00    0.00       4/4           linearSearch [14]
+                0.00    0.00       4/4           binarySearch [15]
+-----------------------------------------------
+                4.91    7.76       1/1           main [1]
+[2]     61.4    4.91    7.76       1         bubbleSort [2]
+                5.50    0.00 2503064942/2504612881     swap [3]
+                2.27    0.00 704982704/1414254865     compareInts [4]
+-----------------------------------------------
+                0.00    0.00  100000/2504612881     selectionSort [5]
+                0.00    0.00 1447939/2504612881     quickSortPartition [8]
+                5.50    0.00 2503064942/2504612881     bubbleSort [2]
+[3]     26.7    5.50    0.00 2504612881         swap [3]
+-----------------------------------------------
+                0.00    0.00     136/1414254865     binarySearch [15]
+                0.00    0.00  400000/1414254865     linearSearch [14]
+                0.00    0.00 1536128/1414254865     merge [11]
+                0.01    0.00 2253193/1414254865     quickSortPartition [8]
+                2.27    0.00 704982704/1414254865     bubbleSort [2]
+                2.27    0.00 705082704/1414254865     selectionSort [5]
+[4]     22.1    4.55    0.00 1414254865         compareInts [4]
+-----------------------------------------------
+                1.91    2.27       1/1           main [1]
+[5]     20.3    1.91    2.27       1         selectionSort [5]
+                2.27    0.00 705082704/1414254865     compareInts [4]
+                0.00    0.00  100000/2504612881     swap [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      8.5    1.76    0.00                 _init [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      7.5    1.55    0.00                 print_int_array [7]
+-----------------------------------------------
+                0.00    0.01   90009/90009       quickSortRecursive [10]
+[8]      0.1    0.00    0.01   90009         quickSortPartition [8]
+                0.01    0.00 2253193/1414254865     compareInts [4]
+                0.00    0.00 1447939/2504612881     swap [3]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[9]      0.1    0.00    0.01       1         quickSort [9]
+                0.00    0.01       1/1           quickSortRecursive [10]
+-----------------------------------------------
+                              180018             quickSortRecursive [10]
+                0.00    0.01       1/1           quickSort [9]
+[10]     0.1    0.00    0.01       1+180018  quickSortRecursive [10]
+                0.00    0.01   90009/90009       quickSortPartition [8]
+                              180018             quickSortRecursive [10]
+-----------------------------------------------
+                0.00    0.00   99999/99999       mergeSortRecursive [13]
+[11]     0.0    0.00    0.00   99999         merge [11]
+                0.00    0.00 1536128/1414254865     compareInts [4]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[12]     0.0    0.00    0.00       1         mergeSort [12]
+                0.00    0.00       1/1           mergeSortRecursive [13]
+-----------------------------------------------
+                              199998             mergeSortRecursive [13]
+                0.00    0.00       1/1           mergeSort [12]
+[13]     0.0    0.00    0.00       1+199998  mergeSortRecursive [13]
+                0.00    0.00   99999/99999       merge [11]
+                              199998             mergeSortRecursive [13]
+-----------------------------------------------
+                0.00    0.00       4/4           main [1]
+[14]     0.0    0.00    0.00       4         linearSearch [14]
+                0.00    0.00  400000/1414254865     compareInts [4]
+-----------------------------------------------
+                0.00    0.00       4/4           main [1]
+[15]     0.0    0.00    0.00       4         binarySearch [15]
+                0.00    0.00     136/1414254865     compareInts [4]
+-----------------------------------------------
+
+Index by function name
+
+   [6] _init                   [1] main                    [9] quickSort
+  [15] binarySearch           [11] merge                   [8] quickSortPartition
+   [2] bubbleSort             [12] mergeSort              [10] quickSortRecursive
+   [4] compareInts            [13] mergeSortRecursive      [5] selectionSort
+  [14] linearSearch            [7] print_int_array         [3] swap
